@@ -9,9 +9,13 @@ const PORT = process.env.PORT || 5500;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(express.static("public"));
 
 app.use("/api", controllers);
 
+app.get("/", (req, res) => {
+  res.sendFile("./index.html");
+});
 // Just for memes and practice
 // app.get("/", (req, res) => {
 //   res.json("hi");
