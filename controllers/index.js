@@ -1,5 +1,5 @@
 const router = require("express").Router();
-// const taskRoutes = require("./taskRoutes");
+const taskRoutes = require("./taskRoutes");
 const userRoutes = require("./userRoutes");
 
 // router.get("/index", (req, res) => {
@@ -7,7 +7,7 @@ const userRoutes = require("./userRoutes");
 // });
 
 // localhost:5500/api/task
-// router.use("/task", taskRoutes);
+router.use("/task", taskRoutes);
 
 // // localhost:5500/api/user
 router.use("/user", userRoutes);
